@@ -243,7 +243,8 @@ vim.o.hlsearch = false
 vim.wo.number = true
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+--vim.o.mouse = 'a'
+vim.o.mouse = ''
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -378,7 +379,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash' },
+    ensure_installed = { 'c', 'cpp', 'python', 'rust', 'vimdoc', 'vim', 'bash', 'glsl', 'hlsl', 'c_sharp' },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
